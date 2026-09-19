@@ -1,0 +1,30 @@
+POST http://localhost:5000/api/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYTZkYjYwMTZlNjkzMzA4MGNjZDYzMiIsImlhdCI6MTc4OTMyMDk4NywiZXhwIjoxNzg5OTI1Nzg3fQ.VqGD7Te87F3uO1aK9__pBDRKnRrXsHOA0jMldaeM3EQ
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="name"
+
+My First Product
+--MyBoundary
+Content-Disposition: form-data; name="description"
+
+Yeh mere VendorHub ka pehla test product hai!
+--MyBoundary
+Content-Disposition: form-data; name="price"
+
+1500
+--MyBoundary
+Content-Disposition: form-data; name="category"
+
+Fashion
+--MyBoundary
+Content-Disposition: form-data; name="stock"
+
+10
+--MyBoundary
+Content-Disposition: form-data; name="images"; filename="test.jpg"
+Content-Type: image/jpeg
+
+< ./test.jpg
+--MyBoundary--
